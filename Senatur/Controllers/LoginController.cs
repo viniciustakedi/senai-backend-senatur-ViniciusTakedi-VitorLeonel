@@ -3,6 +3,10 @@ using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.IdentityModel.Tokens;
+using Senatur.Domains;
+using Senatur.Interfaces;
+using Senatur.Repositories;
+using Senatur.ViewModels;
 
 namespace Senatur.Controllers
 {
@@ -18,7 +22,7 @@ namespace Senatur.Controllers
         }
 
         [HttpPost]
-        public IActionResult Login(LoginViewModel Usuarios)
+        public IActionResult Login(LoginViewModel Usuario)
         {
             Usuarios usuarioSelecionado = _usuarioRepository.BuscarPorEmailSenha(Usuario.Email, Usuario.Senha);
 
