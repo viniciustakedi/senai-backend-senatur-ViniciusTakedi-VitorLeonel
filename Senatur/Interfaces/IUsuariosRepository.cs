@@ -9,6 +9,10 @@ namespace Senatur.Interfaces
         void Atualizar(int id, Usuarios usuario);
         void Cadastar(Usuarios usuario);
         void Deletar(int id);
+<<<<<<< HEAD
+        List<Usuarios> Listar(); 
+=======
         List<Usuarios> Listar();
+>>>>>>> 3d157059ed12fe9f78e4b5ba22d044128cbe7508
     }
 }

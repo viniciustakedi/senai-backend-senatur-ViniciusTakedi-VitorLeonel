@@ -11,8 +11,12 @@ using Senatur.ViewModels;
 namespace Senatur.Controllers
 {
     [Produces("application/json")]
+<<<<<<< HEAD
+    [Route("api/[controller]")]
+=======
     
     [Route("api/[controller")]
+>>>>>>> 3d157059ed12fe9f78e4b5ba22d044128cbe7508
 
     [ApiController]
     public class LoginController : ControllerBase
@@ -41,13 +45,13 @@ namespace Senatur.Controllers
                 new Claim(ClaimTypes.Role, usuarioSelecionado.IdTipoUsuario.ToString())
             };
 
-            var key = new SymmetricSecurityKey(System.Text.Encoding.UTF8.GetBytes("senai-inlock-VitorLeonel-ViniciusTakedi-key-auth"));
+            var key = new SymmetricSecurityKey(System.Text.Encoding.UTF8.GetBytes("senai-senatur-VitorLeonel-ViniciusTakedi-key-auth"));
 
             var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
 
             var token = new JwtSecurityToken(
-                issuer: "InLock.WebApi",                // emissor do token
-                audience: "InLock.WebApi",              // destinatário do token
+                issuer: "Senatur.WebApi",                // emissor do token
+                audience: "Senatur.WebApi",              // destinatário do token
                 claims: claims,                          // dados definidos acima
                 expires: DateTime.Now.AddMinutes(30),    // tempo de expiração
                 signingCredentials: creds                // credenciais do token
