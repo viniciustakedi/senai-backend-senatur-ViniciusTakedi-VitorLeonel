@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using System.Linq;
 using Senatur.Context;
 using Senatur.Domains;
@@ -26,6 +27,11 @@ namespace Senatur.Repositories
         }
 
         public void Deletar(int id)
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public List<Usuarios> Listar()
         {
             throw new System.NotImplementedException();
         }

@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using Senatur.Domains;
 
 namespace Senatur.Interfaces
@@ -8,5 +9,6 @@ namespace Senatur.Interfaces
         void Atualizar(int id, Usuarios usuario);
         void Cadastar(Usuarios usuario);
         void Deletar(int id);
+        List<Usuarios> Listar();
     }
 }
