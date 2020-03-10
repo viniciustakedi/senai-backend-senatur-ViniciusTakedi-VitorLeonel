@@ -12,8 +12,8 @@ namespace Senatur.Context
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("Server=DEV1001\\SQLEXPRESS; Database=Senaitur.Tarde; Integrated Security=True;");
-            //optionsBuilder.UseSqlServer("Server=DEV1001\\SQLEXPRESS; Database=Senaitur.Tarde; user Id=sa; pwd=sa@132;");
+            // optionsBuilder.UseSqlServer("Server=DEV1001\\SQLEXPRESS; Database=Senaitur.Tarde; Integrated Security=True;");
+            optionsBuilder.UseSqlServer("Server=DEV14\\SQLEXPRESS; Database=Senatur_Tarde; user Id=sa; pwd=sa@132;");
             base.OnConfiguring(optionsBuilder);
         }
 
@@ -64,7 +64,7 @@ namespace Senatur.Context
                     DataIda = Convert.ToDateTime("06/08/2020"),
                     DataVolta = Convert.ToDateTime("10/08/2020"),
                     Preco = Convert.ToDecimal("854,00"),
-                    Ativo = Convert.ToBoolean("1"),
+                    Ativo = Convert.ToBoolean(1),
                     NomeCidade = "Salvador"
                 },
                 new Pacotes
@@ -75,7 +75,7 @@ namespace Senatur.Context
                     DataIda = Convert.ToDateTime("14/05/2020"),
                     DataVolta = Convert.ToDateTime("18/05/2020"),
                     Preco = Convert.ToDecimal("1826,00"),
-                    Ativo = Convert.ToBoolean("1"),
+                    Ativo = Convert.ToBoolean(1),
                     NomeCidade = "Salvador"
                 },
                 new Pacotes
@@ -86,7 +86,7 @@ namespace Senatur.Context
                     DataIda = Convert.ToDateTime("28/03/2020"),
                     DataVolta = Convert.ToDateTime("01/04/2020"),
                     Preco = Convert.ToDecimal("1004,00"),
-                    Ativo = Convert.ToBoolean("1"),
+                    Ativo = Convert.ToBoolean(1),
                     NomeCidade = "Bonito"
                 });
         }
