@@ -1,0 +1,445 @@
+{
+	"info": {
+		"_postman_id": "11a2b71a-5e90-4c87-ad49-9847ff47a4b4",
+		"name": "Senai.Senatur",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Pacotes",
+			"item": [
+				{
+					"name": "Pacotes.Listar",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5001/api/Pacotes",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"Pacotes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Pacotes.ListarId",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6IkFkbWluaXN0cmFkb3JAYWRtLmNvbSIsImp0aSI6IjEiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiIxIiwiZXhwIjoxNTgzOTU1NTAwLCJpc3MiOiJTZW5hdHVyLldlYkFwaSIsImF1ZCI6IlNlbmF0dXIuV2ViQXBpIn0.L4zzXqoBAuQ1QhH7LcKnfkJeD61EzgDxYrw3DhiBSOo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5001/api/Pacotes/2 ",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"Pacotes",
+								"2 "
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Pacotes.ListarAtivos",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6IkFkbWluaXN0cmFkb3JAYWRtLmNvbSIsImp0aSI6IjEiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiIxIiwiZXhwIjoxNTgzOTU1NTAwLCJpc3MiOiJTZW5hdHVyLldlYkFwaSIsImF1ZCI6IlNlbmF0dXIuV2ViQXBpIn0.L4zzXqoBAuQ1QhH7LcKnfkJeD61EzgDxYrw3DhiBSOo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5001/api/Pacotes/Status/ativo",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"Pacotes",
+								"Status",
+								"ativo"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Pacotes.ListarCidade",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6IkFkbWluaXN0cmFkb3JAYWRtLmNvbSIsImp0aSI6IjEiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiIxIiwiZXhwIjoxNTgzOTU1NTAwLCJpc3MiOiJTZW5hdHVyLldlYkFwaSIsImF1ZCI6IlNlbmF0dXIuV2ViQXBpIn0.L4zzXqoBAuQ1QhH7LcKnfkJeD61EzgDxYrw3DhiBSOo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5001/api/Pacotes/Cidade/Salvador",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"Pacotes",
+								"Cidade",
+								"Salvador"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Pacotes.Cadastrar",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6IkFkbWluaXN0cmFkb3JAYWRtLmNvbSIsImp0aSI6IjEiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiIxIiwiZXhwIjoxNTgzOTU1NTAwLCJpc3MiOiJTZW5hdHVyLldlYkFwaSIsImF1ZCI6IlNlbmF0dXIuV2ViQXBpIn0.L4zzXqoBAuQ1QhH7LcKnfkJeD61EzgDxYrw3DhiBSOo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"nomepacote\" : \"meupacote\",\n\t\"descricao\" : \"asdasdsadsaasd\",\n\t\"dataida\" : \"06/06/2001\",\n\t\"datavolta\" : \"07/07/2016\",\n\t\"preco\" : \"100\",\n\t\"ativo\" : 1,\n\t\"nomecidade\" : \"saoPaulo\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/Pacotes",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"Pacotes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Pacotes.Atualizar",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6IkFkbWluaXN0cmFkb3JAYWRtLmNvbSIsImp0aSI6IjEiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiIxIiwiZXhwIjoxNTgzOTU1NTAwLCJpc3MiOiJTZW5hdHVyLldlYkFwaSIsImF1ZCI6IlNlbmF0dXIuV2ViQXBpIn0.L4zzXqoBAuQ1QhH7LcKnfkJeD61EzgDxYrw3DhiBSOo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"nomepacote\" : \"nada\",\n\t\"descricao\" : \"adsa\",\n\t\"nomecidade\" : \"bbb\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/Pacotes/8",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"Pacotes",
+								"8"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Pacotes.Deletar",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6IkFkbWluaXN0cmFkb3JAYWRtLmNvbSIsImp0aSI6IjEiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiIxIiwiZXhwIjoxNTgzOTU1NTAwLCJpc3MiOiJTZW5hdHVyLldlYkFwaSIsImF1ZCI6IlNlbmF0dXIuV2ViQXBpIn0.L4zzXqoBAuQ1QhH7LcKnfkJeD61EzgDxYrw3DhiBSOo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/Pacotes/4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"Pacotes",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Pacotes.ListarPrecoAscendente",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6IkFkbWluaXN0cmFkb3JAYWRtLmNvbSIsImp0aSI6IjEiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiIxIiwiZXhwIjoxNTgzOTU1NTAwLCJpc3MiOiJTZW5hdHVyLldlYkFwaSIsImF1ZCI6IlNlbmF0dXIuV2ViQXBpIn0.L4zzXqoBAuQ1QhH7LcKnfkJeD61EzgDxYrw3DhiBSOo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5001/api/Pacotes/Preco/barato",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"Pacotes",
+								"Preco",
+								"barato"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Usuarios",
+			"item": [
+				{
+					"name": "Senatur.Listar",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/Usuarios",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"Usuarios"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Senatur.Cadastrar",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"email\": \"teste2@teste.com\",\n\t\"senha\": \"teste2\",\n\t\"IdTipoUsuario\": 2,\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/Usuarios",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"Usuarios"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Senatur.AtualizarPorId",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6IkFkbWluaXN0cmFkb3JAYWRtLmNvbSIsImp0aSI6IjEiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiIxIiwiZXhwIjoxNTgzOTQ3MjQ4LCJpc3MiOiJTZW5hdHVyLldlYkFwaSIsImF1ZCI6IlNlbmF0dXIuV2ViQXBpIn0.U173hO8mmbCa0dtsUFO9tqh5oJddFN3bGgax_v3b8Dk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"Email\": \"TesteAtualizado@teste.com\",\n\t\"Senha\": \"testeatualizado\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/Usuarios/7",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"Usuarios",
+								"7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Senatur.Deletar",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6IkFkbWluaXN0cmFkb3JAYWRtLmNvbSIsImp0aSI6IjEiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiIxIiwiZXhwIjoxNTgzOTQ3MjQ4LCJpc3MiOiJTZW5hdHVyLldlYkFwaSIsImF1ZCI6IlNlbmF0dXIuV2ViQXBpIn0.U173hO8mmbCa0dtsUFO9tqh5oJddFN3bGgax_v3b8Dk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/Usuarios/7",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"Usuarios",
+								"7"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Login",
+			"item": [
+				{
+					"name": "Senatur.Login",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"email\" : \"Administrador@adm.com\",\n\t\"senha\" : \"adm1\"\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/Login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"Login"
+							]
+						},
+						"description": "Para fazer login"
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
