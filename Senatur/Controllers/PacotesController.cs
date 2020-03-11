@@ -1,3 +1,5 @@
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Senatur.Domains;
 using Senatur.Interfaces;
@@ -79,6 +81,11 @@ namespace Senatur.Controllers
             }
         }
 
+        /// <summary>
+        /// Para listar as cidades
+        /// </summary>
+        /// <param name="cidade"></param>
+        /// <returns>Retorna as cidades buscadas</returns>
         [Authorize(Roles = "1")] //Indica a role que tem a permissão para fazer a ação
         [ProducesResponseType(StatusCodes.Status200OK)] //A resposta de sucesso será "Status200Ok"
         [HttpGet("Cidade/{cidade}")]
@@ -87,15 +94,17 @@ namespace Senatur.Controllers
             return Ok(_pacoteRepository.ListarPorCidade(cidade)); //Retorna a cidade buscada pelo usuário
         }   
 
+        /// <summary>
+        /// Para listar os valores/preços dos pacotes 
+        /// </summary>
+        /// <param name="valor"></param>
+        /// <returns>Retorna os preços buscados, dos pacotes.</returns>
         [Authorize(Roles = "1")] //Indica a role que tem a permissão para fazer a ação
         [ProducesResponseType(StatusCodes.Status200OK)] //A resposta de sucesso será "Status200Ok"
         [HttpGet("Preco/{valor}")]
         public IActionResult ListarPorPreco(string valor) //Método de listar por preço
         {
-<<<<<<< HEAD
-            return Ok();    //Retorna um Ok
-=======
-           if (valor == "barato")
+            if (valor == "barato")
             {
                 return Ok(_pacoteRepository.ListarPorPrecoAscendente(valor));
             }
@@ -107,9 +116,13 @@ namespace Senatur.Controllers
             {
                 return BadRequest("Não é possível ordenar da maneira solicitada. Por favor, ordene por 'caro' ou 'barato'");
             }
->>>>>>> 88efec9dbeec0cc42ab2688f1c66da9594a7b8f4
         }
 
+        /// <summary>
+        /// Para cadastrar um usuário 
+        /// </summary>
+        /// <param name="pacote"></param>
+        /// <returns>retorna um usuário cadastrado</returns>
         [Authorize(Roles = "1")] //Indica a role que tem a permissão para fazer a ação
         [ProducesResponseType(StatusCodes.Status200OK)] //A resposta de sucesso será "Status200Ok"
         [HttpPost]
@@ -119,6 +132,11 @@ namespace Senatur.Controllers
             return Created("Inserido", pacote); //Caso tenha sucesso, retorna uma mensagem "Created" "Inserido"
         }
 
+        /// <summary>
+        /// Para atualizar um pacote
+        /// </summary>
+        /// <param name="pacote"></param>
+        /// <returns>Retorna um pacote atualizado pelo Id</returns>
         [Authorize(Roles = "1")] //Indica a role que tem a permissão para fazer a ação
         [ProducesResponseType(StatusCodes.Status200OK)] //A resposta de sucesso será "Status200Ok"
         [HttpPut("{id}")]
@@ -128,6 +146,11 @@ namespace Senatur.Controllers
             return Ok("Atualizado");
         }
 
+        /// <summary>
+        /// Para deletar um pacote por Id
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns>Retorna um pacote deletado pelo Id</returns>
         [Authorize(Roles = "1")] //Indica a role que tem a permissão para fazer a ação
         [ProducesResponseType(StatusCodes.Status200OK)] //A resposta de sucesso será "Status200Ok"
         [HttpDelete("{id}")]
