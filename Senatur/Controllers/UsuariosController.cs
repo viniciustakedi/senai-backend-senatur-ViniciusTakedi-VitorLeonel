@@ -42,13 +42,13 @@ namespace Senatur.Controllers
         /// <param name="id"></param>
         /// <param name="atualizarUsuario"></param>
         /// <returns>Retorna um usuario atualizado</returns>
-        [Authorize(Roles = "1")]
-        [ProducesResponseType(StatusCodes.Status200OK)]
+        [Authorize(Roles = "1")] //Indica a role que tem a permissão para fazer a ação
+        [ProducesResponseType(StatusCodes.Status200OK)] //A resposta de sucesso será "Status200Ok"
         [HttpPut("{id}")]
-        public IActionResult Atualizar(int id, Usuarios atualizarUsuario)
+        public IActionResult Atualizar(int id, Usuarios atualizarUsuario) //Método que atializa o usuário por Id
         {
-            _usuarioRepository.Atualizar(id, atualizarUsuario);
-            return Ok("Usuário atualizado");
+            _usuarioRepository.Atualizar(id, atualizarUsuario); //Atualiza um Usuario por id, pegando o método e o objeto instanciado ("_usuarioRepository") no começo do código
+            return Ok("Usuário atualizado"); //Caso tenha sucesso retorna uma mensagem "Ok" "Usuário atualizado"
 
         }
 
@@ -56,11 +56,11 @@ namespace Senatur.Controllers
         /// Para listar todos os usuários
         /// </summary>
         /// <returns>Retorna uma lista com todos os usuários</returns>
-        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status200OK)] //A resposta de sucesso será "Status200Ok"
         [HttpGet]
-        public IEnumerable<Usuarios> Get()
+        public IEnumerable<Usuarios> Get() //Método para listar os usuarios
         {
-            return _usuarioRepository.Listar();
+            return _usuarioRepository.Listar(); //Retorna os usuarios 
         }
 
         /// <summary>
@@ -68,12 +68,12 @@ namespace Senatur.Controllers
         /// </summary>
         /// <param name="NovoUsuario"></param>
         /// <returns>Retorna um usuário cadastrado </returns>
-        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status200OK)] //A resposta de sucesso será "Status200Ok"
         [HttpPost]
-        public IActionResult Cadastrar(Usuarios NovoUsuario)
+        public IActionResult Cadastrar(Usuarios NovoUsuario) //Método para cadastrar um usuário
         {
-            _usuarioRepository.Cadastar(NovoUsuario);
-            return Ok("Usuário cadastrado com sucesso");
+            _usuarioRepository.Cadastar(NovoUsuario); //Cadastra um usuario
+            return Ok("Usuário cadastrado com sucesso"); //caso tenha sucesso retorna uma mensagem "Ok" "Usuário cadastrado com sucesso"
         }
 
 
@@ -82,13 +82,13 @@ namespace Senatur.Controllers
         /// </summary>
         /// <param name="id"></param>
         /// <returns>Retorna um usuário deletado</returns>
-        [Authorize(Roles = "1")]
-        [ProducesResponseType(StatusCodes.Status200OK)]
+        [Authorize(Roles = "1")] //Indica a role que tem a permissão para fazer a ação
+        [ProducesResponseType(StatusCodes.Status200OK)] //A resposta de sucesso será "Status200Ok"
         [HttpDelete("{id}")]
-        public IActionResult Delete(int id)
+        public IActionResult Delete(int id) //Método para deletar
         {
-            _usuarioRepository.Deletar(id);
-            return Ok("O usuário foi deletado com sucesso");
+            _usuarioRepository.Deletar(id); //Deleta um usuário por id, pegando o método e o objeto instanciado ("_usuarioRepository") no começo do código
+            return Ok("O usuário foi deletado com sucesso"); //Caso tenha sucesso ele retorna uma mensagem "Ok" "O usuário foi deletado com sucesso"
         }
     }
 }
