@@ -11,7 +11,13 @@ namespace Senatur.Repositories
         SenaturContext ctx = new SenaturContext();
         public void Atualizar(int id, Usuarios usuario)
         {
-            throw new System.NotImplementedException();
+            Usuarios atualizarUsuario = ctx.Usuarios.Find(id);
+
+            atualizarUsuario.Email = usuario.Email;
+            atualizarUsuario.Senha = usuario.Senha;
+
+            ctx.Update(atualizarUsuario);
+            ctx.SaveChanges();
         }
 
         
@@ -24,16 +30,20 @@ namespace Senatur.Repositories
         public void Cadastar(Usuarios usuario)
         {
             
+            ctx.Usuarios.Add(usuario);
+            ctx.SaveChanges();
         }
 
         public void Deletar(int id)
         {
-            throw new System.NotImplementedException();
+            Usuarios usuarioBuscado = ctx.Usuarios.Find(id);
+            ctx.Usuarios.Remove(usuarioBuscado);
+            ctx.SaveChanges();
         }
 
         public List<Usuarios> Listar()
         {
-            throw new System.NotImplementedException();
+            return ctx.Usuarios.ToList();
         }
     }
 }

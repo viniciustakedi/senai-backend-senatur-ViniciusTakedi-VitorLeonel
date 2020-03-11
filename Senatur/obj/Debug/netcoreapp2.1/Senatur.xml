@@ -4,5 +4,26 @@
         <name>Senatur</name>
     </assembly>
     <members>
+        <member name="M:Senatur.Controllers.UsuariosController.Atualizar(System.Int32,Senatur.Domains.Usuarios)">
+            <summary>
+                Atualizar usuário passando o Id na url
+            </summary>
+            <param name="id"></param>
+            <param name="atualizarUsuario"></param>
+            <returns>Retorna um usuario atualizado</returns>
+        </member>
+        <member name="M:Senatur.Controllers.UsuariosController.Get">
+            <summary>
+            Para listar todos os usuários
+            </summary>
+            <returns>Retorna uma lista com todos os usuários</returns>
+        </member>
+        <member name="M:Senatur.Controllers.UsuariosController.Cadastrar(Senatur.Domains.Usuarios)">
+            <summary>
+            Para cadastrar um novo usuário
+            </summary>
+            <param name="NovoUsuario"></param>
+            <returns>Retorna uma mensagem </returns>
+        </member>
     </members>
 </doc>

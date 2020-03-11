@@ -12043,23 +12043,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\48171009824\\.nuget\\packages\\": {},
+    "C:\\Users\\48730204844\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "c:\\Users\\48171009824\\Desktop\\senai-backend-senatur-ViniciusTakedi-VitorLeonel\\Senatur\\Senatur.csproj",
+      "projectUniqueName": "c:\\Users\\48730204844\\Desktop\\senai-backend-senatur-ViniciusTakedi-VitorLeonel\\Senatur\\Senatur.csproj",
       "projectName": "Senatur",
-      "projectPath": "c:\\Users\\48171009824\\Desktop\\senai-backend-senatur-ViniciusTakedi-VitorLeonel\\Senatur\\Senatur.csproj",
-      "packagesPath": "C:\\Users\\48171009824\\.nuget\\packages\\",
-      "outputPath": "c:\\Users\\48171009824\\Desktop\\senai-backend-senatur-ViniciusTakedi-VitorLeonel\\Senatur\\obj\\",
+      "projectPath": "c:\\Users\\48730204844\\Desktop\\senai-backend-senatur-ViniciusTakedi-VitorLeonel\\Senatur\\Senatur.csproj",
+      "packagesPath": "C:\\Users\\48730204844\\.nuget\\packages\\",
+      "outputPath": "c:\\Users\\48730204844\\Desktop\\senai-backend-senatur-ViniciusTakedi-VitorLeonel\\Senatur\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\48171009824\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\48730204844\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
