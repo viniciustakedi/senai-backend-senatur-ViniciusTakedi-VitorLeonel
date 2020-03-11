@@ -108,6 +108,7 @@ namespace Senatur
 
             app.UseSwagger();
             app.UseHttpsRedirection();
+            app.UseAuthentication();
             app.UseMvc();
         }
     }

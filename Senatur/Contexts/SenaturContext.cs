@@ -12,8 +12,8 @@ namespace Senatur.Context
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("Server=DEV1001\\SQLEXPRESS; Database=Senatur_Tarde; user Id=sa; pwd=sa@132;");
-            // optionsBuilder.UseSqlServer("Server=DEV14\\SQLEXPRESS; Database=Senatur_Tarde; user Id=sa; pwd=sa@132;");
+            // optionsBuilder.UseSqlServer("Server=DEV1001\\SQLEXPRESS; Database=Senatur_Tarde; user Id=sa; pwd=sa@132;");
+            optionsBuilder.UseSqlServer("Server=DEV14\\SQLEXPRESS; Database=Senatur_Tarde; user Id=sa; pwd=sa@132;");
             base.OnConfiguring(optionsBuilder);
         }
 

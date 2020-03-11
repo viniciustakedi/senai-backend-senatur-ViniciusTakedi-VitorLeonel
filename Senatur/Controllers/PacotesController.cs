@@ -7,7 +7,7 @@ namespace Senatur.Controllers
 {
     [Produces("application/json")]
 
-    [Route("api/[controller")]
+    [Route("api/[controller]")]
 
     [ApiController]
     public class PacotesController : ControllerBase
@@ -31,12 +31,11 @@ namespace Senatur.Controllers
             return Ok(_pacoteRepository.BuscarPorId(id));
         }
 
-        [HttpGet("{status}")]
+        [HttpGet("Status/{status}")]
         public IActionResult ListarAtivos(string status)
         {
             if (status == "ativo")
             {
-
                 return Ok(_pacoteRepository.ListarAtivos());
             }
             else if (status == "inativo")
@@ -50,31 +49,38 @@ namespace Senatur.Controllers
 
         }
 
-        [HttpGet("/{cidade}")]
-        public IActionResult ListarInativos(string cidade)
-        {
-            return Ok(_pacoteRepository.ListarPorCidade(cidade));
-        }
-
-        [HttpGet("{cidade}")]
+        [HttpGet("Cidade/{cidade}")]
         public IActionResult ListarPorCidade(string cidade)
         {
             return Ok(_pacoteRepository.ListarPorCidade(cidade));
         }
 
+        [HttpGet("Preco/{valor}")]
+        public IActionResult ListarPorPreco(string valor)
+        {
+            return Ok();
+        }
+
         [HttpPost]
         public IActionResult Cadastrar(Pacotes pacote)
         {
+            _pacoteRepository.Cadastar(pacote);
             return Created("Inserido", pacote);
         }
 
-        [HttpPut]
+        [HttpPut("{id}")]
         public IActionResult Atualizar(int id, Pacotes pacote)
         {
             _pacoteRepository.Atualizar(id, pacote);
             return Ok("Atualizado");
         }
 
+        [HttpDelete("{id}")]
+        public IActionResult Deletar(int id)
+        {
+            _pacoteRepository.Deletar(id);
+            return Ok("Deletado");
+        }
 
     }
 }
