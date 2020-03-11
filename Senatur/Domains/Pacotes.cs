@@ -12,11 +12,11 @@ namespace Senatur.Domains
         public int IdPacote { get; set; }
 
         [Column(TypeName = "VARCHAR (255)")]
-        [Required(ErrorMessage = "O nome do pacote é obrigatório!")]
+        // [Required(ErrorMessage = "O nome do pacote é obrigatório!")]
         public string NomePacote { get; set; }
 
         [Column(TypeName = "VARCHAR (500)")]
-        [Required(ErrorMessage = "A descrição do pacote é necessaria")]
+        // [Required(ErrorMessage = "A descrição do pacote é necessaria")]
         public string Descricao { get; set; }
 
         [Column(TypeName = "DATE")]
@@ -36,7 +36,7 @@ namespace Senatur.Domains
         public bool Ativo { get; set; }
 
         [Column(TypeName = "VARCHAR(255)")]
-        [Required(ErrorMessage = "É obrigatório informar o nome da cidade")]
+        // [Required(ErrorMessage = "É obrigatório informar o nome da cidade")]
         public string NomeCidade { get; set; }
     }
 }

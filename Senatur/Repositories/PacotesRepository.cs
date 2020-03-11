@@ -9,39 +9,38 @@ namespace Senatur.Repositories
     public class PacotesRepository : IPacotesRepository
     {
         SenaturContext ctx = new SenaturContext();
-        public void Atualizar(int id, Pacotes pacote)
+        public void Atualizar(int id, Pacotes pacoteAtualizado)
         {
             Pacotes pacoteBuscado = ctx.Pacotes.Find(id);
 
-            if (pacote.NomePacote != null)
+            if (pacoteAtualizado.NomePacote != null)
             {
-                pacoteBuscado.NomePacote = pacote.NomePacote;
+                pacoteBuscado.NomePacote = pacoteAtualizado.NomePacote;
             }
-            if (pacote.Descricao != null)
+            if (pacoteAtualizado.NomeCidade != null)
             {
-                pacoteBuscado.Descricao = pacote.Descricao;
+                pacoteBuscado.NomeCidade = pacoteAtualizado.NomeCidade;
             }
-            if (pacote.DataIda != pacote.DataIda)
+            if (pacoteAtualizado.Preco != pacoteBuscado.Preco)
             {
-                pacoteBuscado.DataIda = pacote.DataIda;
+                pacoteAtualizado.Preco = pacoteBuscado.Preco;
             }
-            if (pacote.DataVolta != pacote.DataVolta)
+            if (pacoteAtualizado.Descricao != null)
             {
-                pacoteBuscado.DataVolta = pacote.DataVolta;
+                pacoteBuscado.Descricao = pacoteAtualizado.Descricao;
             }
-            if (pacote.Preco != pacoteBuscado.Preco)
+            if (pacoteAtualizado.DataVolta != null)
             {
-                pacoteBuscado.Preco = pacote.Preco;
+                pacoteBuscado.DataVolta = pacoteAtualizado.DataVolta;
             }
-            if (pacote.Ativo != pacoteBuscado.Ativo)
+            if (pacoteAtualizado.DataIda != null)
             {
-                pacoteBuscado.Ativo = pacote.Ativo;
+                pacoteBuscado.DataIda = pacoteAtualizado.DataIda;
             }
-            if (pacote.NomeCidade != null)
+            if (pacoteAtualizado.Ativo != pacoteBuscado.Ativo)
             {
-                pacoteBuscado.NomeCidade = pacote.NomeCidade;
+                pacoteBuscado.Ativo = pacoteAtualizado.Ativo;
             }
-
             ctx.Pacotes.Update(pacoteBuscado);
             ctx.SaveChanges();
         }

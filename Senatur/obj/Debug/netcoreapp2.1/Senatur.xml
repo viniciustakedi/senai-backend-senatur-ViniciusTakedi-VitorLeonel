@@ -87,7 +87,8 @@
             <summary>
             Para atualizar um pacote
             </summary>
-            <param name="pacote"></param>
+            <param name="id"></param>
+            <param name="pacoteAtualizado"></param>
             <returns>Retorna um pacote atualizado pelo Id</returns>
         </member>
         <member name="M:Senatur.Controllers.PacotesController.Deletar(System.Int32)">

@@ -135,14 +135,15 @@ namespace Senatur.Controllers
         /// <summary>
         /// Para atualizar um pacote
         /// </summary>
-        /// <param name="pacote"></param>
+        /// <param name="id"></param>
+        /// <param name="pacoteAtualizado"></param>
         /// <returns>Retorna um pacote atualizado pelo Id</returns>
         [Authorize(Roles = "1")] //Indica a role que tem a permissão para fazer a ação
         [ProducesResponseType(StatusCodes.Status200OK)] //A resposta de sucesso será "Status200Ok"
         [HttpPut("{id}")]
-        public IActionResult Atualizar(int id, Pacotes pacote) //Método para atualizar um pacote
+        public IActionResult Atualizar(int id, Pacotes pacoteAtualizado) //Método para atualizar um pacote
         {
-            _pacoteRepository.Atualizar(id, pacote); //Atualiza um pacote por id, pegando o método e o objeto instanciado ("_pacoteRepository") no começo do código
+            _pacoteRepository.Atualizar(id, pacoteAtualizado); //Atualiza um pacote por id, pegando o método e o objeto instanciado ("_pacoteRepository") no começo do código
             return Ok("Atualizado");
         }
 
