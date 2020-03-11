@@ -1,3 +1,5 @@
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Senatur.Domains;
 using Senatur.Interfaces;
@@ -92,9 +94,6 @@ namespace Senatur.Controllers
         [HttpGet("Preco/{valor}")]
         public IActionResult ListarPorPreco(string valor) //Método de listar por preço
         {
-<<<<<<< HEAD
-            return Ok();    //Retorna um Ok
-=======
            if (valor == "barato")
             {
                 return Ok(_pacoteRepository.ListarPorPrecoAscendente(valor));
@@ -107,7 +106,6 @@ namespace Senatur.Controllers
             {
                 return BadRequest("Não é possível ordenar da maneira solicitada. Por favor, ordene por 'caro' ou 'barato'");
             }
->>>>>>> 88efec9dbeec0cc42ab2688f1c66da9594a7b8f4
         }
 
         [Authorize(Roles = "1")] //Indica a role que tem a permissão para fazer a ação

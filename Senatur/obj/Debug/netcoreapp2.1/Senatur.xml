@@ -27,6 +27,41 @@
             <param>L</param>
             <returns>Retorna um token com as informações do usuário</returns>
         </member>
+        <member name="T:Senatur.Controllers.PacotesController">
+            <summary>
+            Controller responsável pelo Login
+            </summary>
+        </member>
+        <member name="P:Senatur.Controllers.PacotesController._pacoteRepository">
+            <summary>
+            Cria um objeto _pacoteRepository que irá receber todos os métodos definidos na interface
+            </summary>
+        </member>
+        <member name="M:Senatur.Controllers.PacotesController.#ctor">
+            <summary>
+            Instancia este objeto para que haja a referência aos métodos no repositório
+            </summary>
+        </member>
+        <member name="M:Senatur.Controllers.PacotesController.Listar">
+            <summary>
+            Para listar os pacotes
+            </summary>
+            <returns>Retorna uma lista com os pacotes/</returns>
+        </member>
+        <member name="M:Senatur.Controllers.PacotesController.ListarPorId(System.Int32)">
+            <summary>
+            Para listar os pacotes por Id
+            </summary>
+            <param name="id"></param>
+            <returns>Retorna o pacote que foi buscado pela id</returns>
+        </member>
+        <member name="M:Senatur.Controllers.PacotesController.ListarAtivos(System.String)">
+            <summary>
+            Para listar os pacotes ativos 
+            </summary>
+            <param name="status"></param>
+            <returns>Para listar todos os pacotes que estão ativos</returns>
+        </member>
         <member name="T:Senatur.Controllers.UsuariosController">
             <summary>
             Controller responsável pelos endpoints referentes aos jogos
