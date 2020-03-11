@@ -45,10 +45,5 @@ namespace Senatur.Repositories
         {
             return ctx.Usuarios.ToList();
         }
-
-        public List<Usuarios> Listar()
-        {
-            throw new System.NotImplementedException();
-        }
     }
 }

@@ -7,7 +7,7 @@ namespace Senatur.Controllers
 {
     [Produces("application/json")]
 
-    [Route("api/[controller")]
+    [Route("api/[controller]")]
 
     [ApiController]
     public class PacotesController : ControllerBase
