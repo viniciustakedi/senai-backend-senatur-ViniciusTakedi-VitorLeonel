@@ -13,13 +13,34 @@ namespace Senatur.Repositories
         {
             Pacotes pacoteBuscado = ctx.Pacotes.Find(id);
 
-            pacoteBuscado.NomePacote = pacote.NomePacote;
-            pacoteBuscado.Descricao = pacote.Descricao;
-            pacoteBuscado.DataIda = pacote.DataIda;
-            pacoteBuscado.DataVolta = pacote.DataVolta;
-            pacoteBuscado.Preco = pacote.Preco;
-            pacoteBuscado.Ativo = pacote.Ativo;
-            pacoteBuscado.NomeCidade = pacote.NomeCidade;
+            if (pacote.NomePacote != null)
+            {
+                pacoteBuscado.NomePacote = pacote.NomePacote;
+            }
+            if (pacote.Descricao != null)
+            {
+                pacoteBuscado.Descricao = pacote.Descricao;
+            }
+            if (pacote.DataIda != pacote.DataIda)
+            {
+                pacoteBuscado.DataIda = pacote.DataIda;
+            }
+            if (pacote.DataVolta != pacote.DataVolta)
+            {
+                pacoteBuscado.DataVolta = pacote.DataVolta;
+            }
+            if (pacote.Preco != pacoteBuscado.Preco)
+            {
+                pacoteBuscado.Preco = pacote.Preco;
+            }
+            if (pacote.Ativo != pacoteBuscado.Ativo)
+            {
+                pacoteBuscado.Ativo = pacote.Ativo;
+            }
+            if (pacote.NomeCidade != null)
+            {
+                pacoteBuscado.NomeCidade = pacote.NomeCidade;
+            }
 
             ctx.Pacotes.Update(pacoteBuscado);
             ctx.SaveChanges();
