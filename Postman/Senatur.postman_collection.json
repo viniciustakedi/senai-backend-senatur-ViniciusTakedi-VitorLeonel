@@ -12,6 +12,16 @@
 				{
 					"name": "Senatur.Login",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
 						"method": "POST",
 						"header": [],
 						"body": {
@@ -24,12 +34,12 @@
 							}
 						},
 						"url": {
-							"raw": "https://localhost:5001/api/Login",
-							"protocol": "https",
+							"raw": "http://localhost:5000/api/Login",
+							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "5001",
+							"port": "5000",
 							"path": [
 								"api",
 								"Login"
@@ -45,12 +55,12 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "https://localhost:5001/api/Usuarios",
-							"protocol": "https",
+							"raw": "http://localhost:5000/api/Usuarios",
+							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "5001",
+							"port": "5000",
 							"path": [
 								"api",
 								"Usuarios"
@@ -66,7 +76,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n\t\"email\": \"teste@teste.com\",\n\t\"senha\": \"teste1\",\n\t\"IdTipoUsuario\": 2,\n}",
+							"raw": "{\n\t\"email\": \"teste2@teste.com\",\n\t\"senha\": \"teste2\",\n\t\"IdTipoUsuario\": 2,\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -74,15 +84,86 @@
 							}
 						},
 						"url": {
-							"raw": "https://localhost:5001/api/Usuarios",
-							"protocol": "https",
+							"raw": "http://localhost:5000/api/Usuarios",
+							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "5001",
+							"port": "5000",
 							"path": [
 								"api",
 								"Usuarios"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Senatur.AtualizarPorId",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6IkFkbWluaXN0cmFkb3JAYWRtLmNvbSIsImp0aSI6IjEiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiIxIiwiZXhwIjoxNTgzOTQ3MjQ4LCJpc3MiOiJTZW5hdHVyLldlYkFwaSIsImF1ZCI6IlNlbmF0dXIuV2ViQXBpIn0.U173hO8mmbCa0dtsUFO9tqh5oJddFN3bGgax_v3b8Dk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"Email\": \"TesteAtualizado@teste.com\",\n\t\"Senha\": \"testeatualizado\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/Usuarios/7",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"Usuarios",
+								"7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Senatur.Deletar",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6IkFkbWluaXN0cmFkb3JAYWRtLmNvbSIsImp0aSI6IjEiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiIxIiwiZXhwIjoxNTgzOTQ3MjQ4LCJpc3MiOiJTZW5hdHVyLldlYkFwaSIsImF1ZCI6IlNlbmF0dXIuV2ViQXBpIn0.U173hO8mmbCa0dtsUFO9tqh5oJddFN3bGgax_v3b8Dk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/Usuarios/7",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"Usuarios",
+								"7"
 							]
 						}
 					},
