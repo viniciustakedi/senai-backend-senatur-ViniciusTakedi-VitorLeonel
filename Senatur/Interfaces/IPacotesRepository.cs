@@ -13,5 +13,7 @@ namespace Senatur.Interfaces
         List<Pacotes> ListarAtivos();
         List<Pacotes> ListarInativos();
         List<Pacotes> ListarPorCidade(string cidade);
+        List<Pacotes> ListarPorPrecoAscendente(string valor);
+        List<Pacotes> ListarPorPrecoDescendente(string valor);
     }
 }
