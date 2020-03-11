@@ -62,5 +62,15 @@ namespace Senatur.Repositories
         {
             return ctx.Pacotes.ToList().FindAll(p => p.NomeCidade == cidade);
         }
+
+        public List<Pacotes> ListarPorPrecoAscendente(string valor)
+        {
+            return ctx.Pacotes.OrderBy(p => p.Preco).ToList();
+        }
+
+        public List<Pacotes> ListarPorPrecoDescendente(string valor)
+        {
+            return ctx.Pacotes.OrderByDescending(p => p.Preco).ToList();
+        }
     }
 }

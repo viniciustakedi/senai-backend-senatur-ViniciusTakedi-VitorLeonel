@@ -58,7 +58,18 @@ namespace Senatur.Controllers
         [HttpGet("Preco/{valor}")]
         public IActionResult ListarPorPreco(string valor)
         {
-            return Ok();
+           if (valor == "barato")
+            {
+                return Ok(_pacoteRepository.ListarPorPrecoAscendente(valor));
+            }
+            else if (valor == "caro")
+            {
+                return Ok(_pacoteRepository.ListarPorPrecoDescendente(valor));
+            }
+            else
+            {
+                return BadRequest("Não é possível ordenar da maneira solicitada. Por favor, ordene por 'caro' ou 'barato'");
+            }
         }
 
         [HttpPost]
